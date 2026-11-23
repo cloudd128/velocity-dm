@@ -304,6 +304,19 @@ a {
   color: var(--accent-text);
 }
 
+.beta {
+  display: inline-block;
+  margin-inline-start: 0.4em;
+  padding: 0.1em 0.55em;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: 0.15em;
+}
+
 .display {
   margin: 0;
   font-family: var(--font-display);
