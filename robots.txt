@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://cloudd128.github.io/velocity-dm/sitemap.xml
