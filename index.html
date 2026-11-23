@@ -2,124 +2,187 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>VELOCITY DM — Download manager for Windows</title>
-    <meta
-      name="description"
-      content="VELOCITY DM is a fast, compact download manager for Windows: multi-connection downloads, resume after crashes and restarts, integrity checks, scheduler and a Chrome/Edge extension. Free."
-    />
-    <meta property="og:title" content="VELOCITY DM — Download manager for Windows" />
-    <meta property="og:description" content="Fast, resumable downloads with integrity checks. Free for Windows 10 and 11." />
-    <meta property="og:image" content="assets/screenshot.png" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>VELOCITY DM — Downloads that finish.</title>
+    <meta name="description" content="VELOCITY DM is a free download manager for Windows 10 and 11. Up to 32 connections per file, automatic resume after crashes and restarts, byte-level integrity checks, a night scheduler and a Chrome/Edge extension." />
+    <meta property="og:title" content="VELOCITY DM — Downloads that finish." />
+    <meta property="og:description" content="Free download manager for Windows. Resumes after restarts, verifies every byte." />
+    <meta property="og:image" content="https://cloudd128.github.io/velocity-dm/assets/screenshot.png" />
+    <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="assets/favicon.png" />
     <link rel="stylesheet" href="assets/site.css" />
   </head>
   <body>
-    <header class="nav">
-      <a class="brand" href="./">
-        <img src="assets/icon-128.png" width="28" height="28" alt="" />
-        <span>VELOCITY <b>DM</b></span>
-      </a>
-      <nav class="nav__links">
-        <a href="#specs" data-en="Features" data-ar="المميزات">Features</a>
-        <a href="#extension" data-en="Browser extension" data-ar="إضافة المتصفح">Browser extension</a>
-        <a href="privacy.html" data-en="Privacy" data-ar="الخصوصية">Privacy</a>
-        <button class="lang" id="lang" type="button" aria-label="Language">عربي</button>
-      </nav>
+    <a class="skip" href="#main" data-en="Skip to content" data-ar="انتقل إلى المحتوى">Skip to content</a>
+
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="brand" href="./" aria-label="VELOCITY DM">
+          <img src="assets/icon-128.png" width="22" height="22" alt="" />
+          <span>VELOCITY&nbsp;DM</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#features" data-en="Features" data-ar="المميزات">Features</a>
+          <a href="#extension" data-en="Extension" data-ar="الإضافة">Extension</a>
+          <a href="#specs" data-en="Specs" data-ar="المواصفات">Specs</a>
+          <a href="privacy.html" data-en="Privacy" data-ar="الخصوصية">Privacy</a>
+        </nav>
+        <div class="nav__end">
+          <button class="lang" id="lang" type="button" lang="ar">عربي</button>
+          <a class="pill pill--small" href="#download" data-en="Download" data-ar="تحميل">Download</a>
+        </div>
+      </div>
     </header>
 
-    <main>
+    <main id="main">
+      <!-- Hero -->
       <section class="hero">
-        <p class="eyebrow" data-en="Download manager for Windows" data-ar="مدير تحميلات لويندوز">Download manager for Windows</p>
-        <h1 data-en="Downloads that finish." data-ar="تحميلات بتكمل لآخرها.">Downloads that finish.</h1>
-        <p class="lead"
-          data-en="Multi-connection transfers, automatic resume after crashes and Windows restarts, and a byte-level integrity check before any file is marked complete."
-          data-ar="تحميل باتصالات متعددة، واستكمال تلقائي بعد التوقف المفاجئ أو إعادة تشغيل ويندوز، وتحقق من سلامة الملف قبل ما يتعلّم إنه مكتمل.">
-          Multi-connection transfers, automatic resume after crashes and Windows restarts, and a byte-level integrity check before any file is marked complete.
+        <p class="eyebrow reveal">VELOCITY DM</p>
+        <h1 class="display reveal" data-en-html="Downloads<br />that finish." data-ar-html="تحميلات<br />بتكمل لآخرها.">Downloads<br />that finish.</h1>
+        <p class="lead reveal"
+          data-en="A fast, quiet download manager for Windows. It splits files across connections, survives crashes and restarts, and checks every byte before it calls a file done."
+          data-ar="مدير تحميلات سريع وهادي لويندوز. بيقسّم الملف على أكتر من اتصال، ومبيتأثرش بالتوقف المفاجئ أو الريستارت، وبيتأكد من كل بايت قبل ما يقول إن الملف خلص.">
+          A fast, quiet download manager for Windows. It splits files across connections, survives crashes and restarts, and checks every byte before it calls a file done.
         </p>
-        <div class="cta">
-          <a class="btn btn--primary" id="download" href="https://github.com/cloudd128/velocity-dm/releases/latest/download/VELOCITY-DM-Setup-x64.exe">
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-5-5m5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <div class="cta reveal">
+          <a class="pill" href="https://github.com/cloudd128/velocity-dm/releases/latest/download/VELOCITY-DM-Setup-x64.exe" data-download>
             <span data-en="Download for Windows" data-ar="تحميل لويندوز">Download for Windows</span>
           </a>
-          <a class="btn" href="#extension" data-en="Browser extension" data-ar="إضافة المتصفح">Browser extension</a>
+          <a class="link" href="#features"><span data-en="See how it works" data-ar="شوف بيشتغل إزاي">See how it works</span> <span aria-hidden="true" class="chev">›</span></a>
         </div>
-        <p class="meta" data-en="Free · Windows 10 and 11 (64-bit) · English and Arabic" data-ar="مجاني · ويندوز 10 و11 (64 بت) · عربي وإنجليزي">
-          Free · Windows 10 and 11 (64-bit) · English and Arabic
-        </p>
+        <p class="fine reveal" data-en="Free · Windows 10 and 11, 64-bit · English and العربية" data-ar="مجاني · ويندوز 10 و11، 64 بت · English والعربية">Free · Windows 10 and 11, 64-bit · English and العربية</p>
       </section>
 
-      <figure class="shot">
-        <img src="assets/screenshot.png" width="1100" height="680" alt="VELOCITY DM main window with downloads in progress" />
+      <figure class="product reveal">
+        <img src="assets/screenshot.png" width="1102" height="712" alt="The VELOCITY DM window: a download list with live connection maps, file categories and a details pane." />
       </figure>
 
-      <section class="specs" id="specs">
-        <h2 data-en="What it does" data-ar="بيعمل إيه">What it does</h2>
-        <dl class="spec">
-          <div>
-            <dt data-en="Connections" data-ar="الاتصالات">Connections</dt>
-            <dd data-en="Up to 32 per file. Added only while they increase speed; reduced when a server pushes back." data-ar="لحد 32 لكل ملف. بتزيد بس طالما بتسرّع، وبتقل لو السيرفر اعترض.">Up to 32 per file. Added only while they increase speed; reduced when a server pushes back.</dd>
-          </div>
-          <div>
-            <dt data-en="Live connection map" data-ar="خريطة الاتصالات">Live connection map</dt>
-            <dd data-en="Every row shows the byte range each connection is filling, in real time." data-ar="كل صف بيوريك كل اتصال بيحمّل أي جزء من الملف، لحظة بلحظة.">Every row shows the byte range each connection is filling, in real time.</dd>
-          </div>
-          <div>
-            <dt data-en="Resume" data-ar="الاستكمال">Resume</dt>
-            <dd data-en="Pause and continue. After a crash or a Windows restart it starts with Windows and picks up where it stopped." data-ar="وقّف وكمّل. وبعد توقف مفاجئ أو ريستارت ويندوز، بيفتح مع ويندوز ويكمّل من مكانه.">Pause and continue. After a crash or a Windows restart it starts with Windows and picks up where it stopped.</dd>
-          </div>
-          <div>
-            <dt data-en="Integrity" data-ar="سلامة الملف">Integrity</dt>
-            <dd data-en="Ranges, sizes and server validators are checked on every response; optional SHA-256. Existing files are never overwritten." data-ar="بيتحقق من الأجزاء والحجم مع كل رد من السيرفر، وبصمة SHA-256 اختيارية. ومبيكتبش فوق ملف موجود أبدًا.">Ranges, sizes and server validators are checked on every response; optional SHA-256. Existing files are never overwritten.</dd>
-          </div>
-          <div>
-            <dt data-en="Scheduler" data-ar="الجدولة">Scheduler</dt>
-            <dd data-en="Download only inside a time window on chosen days — made for night internet plans." data-ar="حمّل في ساعات وأيام محددة بس — مناسب لباقات الليل.">Download only inside a time window on chosen days — made for night internet plans.</dd>
-          </div>
-          <div>
-            <dt data-en="Queue & limits" data-ar="الطابور والسرعة">Queue &amp; limits</dt>
-            <dd data-en="Simultaneous download limit, reorderable queue, global and per-download speed limits." data-ar="حد للتحميلات المتزامنة، وطابور تقدر ترتّبه، وحد سرعة عام ولكل تحميل.">Simultaneous download limit, reorderable queue, global and per-download speed limits.</dd>
-          </div>
-          <div>
-            <dt data-en="Languages" data-ar="اللغات">Languages</dt>
-            <dd data-en="English and Arabic with a full right-to-left layout, switchable at any time." data-ar="عربي وإنجليزي، والواجهة كلها بتتقلب يمين لشمال، وتقدر تغيّر في أي وقت.">English and Arabic with a full right-to-left layout, switchable at any time.</dd>
-          </div>
-          <div>
-            <dt data-en="Size" data-ar="الحجم">Size</dt>
-            <dd data-en="About 4 MB installer. Runs quietly in the tray." data-ar="ملف تسطيب حوالي 4 ميجا، وبيشتغل بهدوء جنب الساعة.">About 4 MB installer. Runs quietly in the tray.</dd>
-          </div>
-        </dl>
+      <!-- Numbers -->
+      <section class="numbers" aria-label="At a glance">
+        <div class="number reveal"><strong>32</strong><span data-en="connections per file, added only while they help" data-ar="اتصال لكل ملف، بتزيد بس لو بتفرق">connections per file, added only while they help</span></div>
+        <div class="number reveal"><strong data-en="2 s" data-ar="2 ث">2 s</strong><span data-en="between saved checkpoints — a restart costs seconds, not the file" data-ar="بين كل حفظ والتاني — الريستارت بيضيّع ثواني مش الملف">between saved checkpoints — a restart costs seconds, not the file</span></div>
+        <div class="number reveal"><strong data-en="5 MB" data-ar="5 م.ب">5 MB</strong><span data-en="installer. Lives in the tray, out of your way" data-ar="حجم التسطيب، وبيقعد جنب الساعة بعيد عن طريقك">installer. Lives in the tray, out of your way</span></div>
       </section>
 
-      <section class="ext" id="extension">
-        <div>
-          <h2 data-en="Browser extension" data-ar="إضافة المتصفح">Browser extension</h2>
-          <p
-            data-en="Right-click any link and choose “Download with VELOCITY DM”, or let the extension catch downloads for you. You always confirm in the app, and if the app can’t handle a link the browser keeps downloading it."
-            data-ar="كليك يمين على أي رابط واختار «التحميل باستخدام VELOCITY DM»، أو خلّي الإضافة تلقط التحميلات لوحدها. إنت دايمًا اللي بتأكد من البرنامج، ولو البرنامج مش قادر على رابط، المتصفح بيكمّل تحميله عادي.">
-            Right-click any link and choose “Download with VELOCITY DM”, or let the extension catch downloads for you. You always confirm in the app, and if the app can’t handle a link the browser keeps downloading it.
-          </p>
-          <p class="muted" data-en="Works with Google Chrome and Microsoft Edge. Store listings are coming soon; until then the extension is installed from the app: Options → Browser." data-ar="شغالة مع Google Chrome وMicrosoft Edge. هتنزل على المتاجر قريب، ولحد ده الوقت بتتركب من البرنامج: الخيارات ← المتصفح.">
-            Works with Google Chrome and Microsoft Edge. Store listings are coming soon; until then the extension is installed from the app: Options → Browser.
-          </p>
+      <!-- Features -->
+      <section class="features" id="features">
+        <header class="section-head reveal">
+          <h2 data-en="Built to get the whole file." data-ar="معمول عشان الملف يوصل كامل.">Built to get the whole file.</h2>
+          <p data-en="Every feature exists to answer one question: will the download finish, and will it be right?" data-ar="كل ميزة موجودة عشان سؤال واحد: التحميل هيخلص؟ وهيوصل سليم؟">Every feature exists to answer one question: will the download finish, and will it be right?</p>
+        </header>
+
+        <div class="bento">
+          <!-- Signature: live connection map (interactive) -->
+          <article class="tile tile--wide tile--demo reveal">
+            <div class="tile__text">
+              <h3 data-en="Watch every connection." data-ar="شوف كل اتصال بعينك.">Watch every connection.</h3>
+              <p data-en="Each block is a slice of the file owned by one connection. When a slice finishes early, that connection steals half of the biggest one left — so nothing waits." data-ar="كل جزء هو قطعة من الملف بيحمّلها اتصال لوحده. لما قطعة تخلص بدري، الاتصال بياخد نص أكبر قطعة فاضلة — فمحدش بيستنى.">Each block is a slice of the file owned by one connection. When a slice finishes early, that connection steals half of the biggest one left — so nothing waits.</p>
+            </div>
+            <div class="demo" id="demo" aria-label="Animated illustration of a segmented download" role="img">
+              <div class="demo__bar" id="demo-bar" dir="ltr"></div>
+              <div class="demo__meta" dir="ltr">
+                <span id="demo-pct">0%</span>
+                <span id="demo-speed">—</span>
+              </div>
+              <div class="demo__controls">
+                <button type="button" class="chip" id="demo-toggle" data-en="Pause" data-ar="إيقاف مؤقت">Pause</button>
+                <button type="button" class="chip" id="demo-restart" data-en="Simulate a restart" data-ar="جرّب ريستارت">Simulate a restart</button>
+              </div>
+              <p class="demo__note" data-en="Illustration — not a real download." data-ar="توضيح فقط، مش تحميل حقيقي.">Illustration — not a real download.</p>
+            </div>
+          </article>
+
+          <article class="tile reveal">
+            <div class="glyph glyph--resume" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" /><path d="M32 18v14l9 6" /></svg>
+            </div>
+            <h3 data-en="Picks up after a restart." data-ar="بيكمّل بعد الريستارت.">Picks up after a restart.</h3>
+            <p data-en="Windows update at 3 AM? Power cut? VELOCITY DM starts with Windows and continues from its last checkpoint." data-ar="تحديث ويندوز الساعة 3 الفجر؟ النور قطع؟ البرنامج بيفتح مع ويندوز ويكمّل من آخر نقطة اتحفظت.">Windows update at 3 AM? Power cut? VELOCITY DM starts with Windows and continues from its last checkpoint.</p>
+          </article>
+
+          <article class="tile reveal">
+            <div class="glyph glyph--check" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="12" y="10" width="40" height="44" rx="6" /><path d="M23 33l6 6 12-13" /></svg>
+            </div>
+            <h3 data-en="Right, byte for byte." data-ar="سليم، بايت ببايت.">Right, byte for byte.</h3>
+            <p data-en="Sizes, ranges and server fingerprints are checked on every response, with optional SHA-256. A file you already have is never overwritten." data-ar="الحجم والأجزاء وبصمة السيرفر بتتراجع مع كل رد، وفيه SHA-256 لو حابب. وأي ملف عندك عمره ما بيتكتب فوقه.">Sizes, ranges and server fingerprints are checked on every response, with optional SHA-256. A file you already have is never overwritten.</p>
+          </article>
+
+          <article class="tile reveal">
+            <div class="glyph glyph--night" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" class="dial" /><path d="M32 8a24 24 0 0 1 20.8 12" class="arc" /></svg>
+            </div>
+            <h3 data-en="Downloads at night." data-ar="بيحمّل بالليل.">Downloads at night.</h3>
+            <p data-en="Pick the hours and days. Outside the window, downloads wait; when it opens, they start on their own." data-ar="اختار الساعات والأيام. برّه الوقت ده التحميلات بتستنى، ولما ييجي ميعادها بتبدأ لوحدها.">Pick the hours and days. Outside the window, downloads wait; when it opens, they start on their own.</p>
+          </article>
+
+          <article class="tile reveal">
+            <div class="glyph glyph--lang" aria-hidden="true"><span>Aa</span><span lang="ar">أب</span></div>
+            <h3 data-en="English and العربية." data-ar="عربي وEnglish.">English and العربية.</h3>
+            <p data-en="The whole interface mirrors right-to-left. Switch any time, no restart." data-ar="الواجهة كلها بتتقلب يمين لشمال، وتغيّر في أي وقت من غير ما تقفل البرنامج.">The whole interface mirrors right-to-left. Switch any time, no restart.</p>
+          </article>
         </div>
       </section>
 
-      <section class="note">
-        <p
-          data-en="An honest note: no download manager can exceed your internet connection or bypass limits a server sets. Multiple connections help when a server limits the speed of each connection — which is common."
-          data-ar="ملحوظة بصراحة: مفيش برنامج تحميل يقدر يتعدّى سرعة النت بتاعك أو يكسر حدود السيرفر. الاتصالات المتعددة بتفرق لما السيرفر بيحدد سرعة كل اتصال، وده بيحصل كتير.">
-          An honest note: no download manager can exceed your internet connection or bypass limits a server sets. Multiple connections help when a server limits the speed of each connection — which is common.
-        </p>
+      <!-- Extension -->
+      <section class="extension" id="extension">
+        <div class="extension__copy reveal">
+          <p class="eyebrow" data-en="Chrome and Edge" data-ar="Chrome وEdge">Chrome and Edge</p>
+          <h2 data-en="Right-click. Done." data-ar="كليك يمين. وخلاص.">Right-click. Done.</h2>
+          <p data-en="Choose “Download with VELOCITY DM” on any link, or let the extension catch downloads for you. You confirm every file in the app — and if the app can’t take a link, your browser simply keeps downloading it." data-ar="اختار «التحميل باستخدام VELOCITY DM» على أي رابط، أو خلّي الإضافة تلقط التحميلات لوحدها. إنت بتأكد كل ملف من البرنامج — ولو البرنامج مش قادر على رابط، المتصفح بيكمّل تحميله عادي.">Choose “Download with VELOCITY DM” on any link, or let the extension catch downloads for you. You confirm every file in the app — and if the app can’t take a link, your browser simply keeps downloading it.</p>
+          <p class="muted small" data-en="Install it from the app: Options → Browser. Cookies are sent only if you turn that on." data-ar="ركّبها من البرنامج: الخيارات ← المتصفح. الكوكيز مبتتبعتش إلا لو إنت فعّلتها.">Install it from the app: Options → Browser. Cookies are sent only if you turn that on.</p>
+        </div>
+        <div class="menu-mock reveal" aria-hidden="true">
+          <div class="menu-mock__item">Open link in new tab</div>
+          <div class="menu-mock__item">Copy link address</div>
+          <div class="menu-mock__sep"></div>
+          <div class="menu-mock__item menu-mock__item--active">
+            <img src="assets/icon-128.png" width="16" height="16" alt="" />
+            <span data-en="Download with VELOCITY DM" data-ar="التحميل باستخدام VELOCITY DM">Download with VELOCITY DM</span>
+          </div>
+          <div class="menu-mock__item">Inspect</div>
+        </div>
+      </section>
+
+      <!-- Specs -->
+      <section class="specs" id="specs">
+        <h2 class="reveal" data-en="Specifications" data-ar="المواصفات">Specifications</h2>
+        <dl class="spec reveal">
+          <div><dt data-en="System" data-ar="النظام">System</dt><dd data-en="Windows 10 or 11, 64-bit. WebView2 (built into Windows 11; installed automatically if missing)." data-ar="ويندوز 10 أو 11، 64 بت. WebView2 (موجود في ويندوز 11، وبيتركّب لوحده لو مش موجود).">Windows 10 or 11, 64-bit. WebView2 (built into Windows 11; installed automatically if missing).</dd></div>
+          <div><dt data-en="Protocols" data-ar="البروتوكولات">Protocols</dt><dd data-en="HTTP and HTTPS, redirects, byte ranges, custom headers, cookies, basic authentication." data-ar="HTTP وHTTPS، والتحويلات، وتقسيم الملف، وترويسات مخصصة، وكوكيز، ومصادقة بسيطة.">HTTP and HTTPS, redirects, byte ranges, custom headers, cookies, basic authentication.</dd></div>
+          <div><dt data-en="Connections" data-ar="الاتصالات">Connections</dt><dd data-en="1–32 per download, adaptive. Single-stream fallback for servers without range support." data-ar="من 1 لـ 32 لكل تحميل، بتتظبط لوحدها. ولو السيرفر مبيدعمش التقسيم، بيحمّل باتصال واحد.">1–32 per download, adaptive. Single-stream fallback for servers without range support.</dd></div>
+          <div><dt data-en="Control" data-ar="التحكم">Control</dt><dd data-en="Queue, simultaneous-download limit, global and per-download speed limits, scheduler." data-ar="طابور، وحد للتحميلات المتزامنة، وحد سرعة عام ولكل تحميل، وجدولة.">Queue, simultaneous-download limit, global and per-download speed limits, scheduler.</dd></div>
+          <div><dt data-en="Updates" data-ar="التحديثات">Updates</dt><dd data-en="Signed, automatic, from this site. Downloads keep their progress during an update." data-ar="موقّعة وتلقائية من الموقع ده، والتحميلات بتحتفظ بمكانها أثناء التحديث.">Signed, automatic, from this site. Downloads keep their progress during an update.</dd></div>
+          <div><dt data-en="Privacy" data-ar="الخصوصية">Privacy</dt><dd data-en="No account, no analytics, no ads. Everything stays on your computer." data-ar="مفيش حساب ولا تتبّع ولا إعلانات. كل حاجة بتفضل على جهازك.">No account, no analytics, no ads. Everything stays on your computer.</dd></div>
+        </dl>
+        <p class="honest reveal" data-en="Plainly: no download manager can go faster than your internet connection or past a server’s limits. Multiple connections help when a server slows each connection down — which is common." data-ar="بصراحة: مفيش برنامج تحميل يقدر يعدّي سرعة النت بتاعك أو حدود السيرفر. الاتصالات المتعددة بتفرق لما السيرفر بيبطّأ كل اتصال لوحده — وده بيحصل كتير.">Plainly: no download manager can go faster than your internet connection or past a server’s limits. Multiple connections help when a server slows each connection down — which is common.</p>
+      </section>
+
+      <!-- Download -->
+      <section class="final" id="download">
+        <img class="final__icon reveal" src="assets/icon-128.png" width="88" height="88" alt="" />
+        <h2 class="reveal" data-en="Get VELOCITY DM." data-ar="حمّل VELOCITY DM.">Get VELOCITY DM.</h2>
+        <p class="reveal" data-en="Free. About 5 MB. Updates itself." data-ar="مجاني. حوالي 5 ميجا. وبيحدّث نفسه.">Free. About 5 MB. Updates itself.</p>
+        <div class="cta reveal">
+          <a class="pill pill--large" href="https://github.com/cloudd128/velocity-dm/releases/latest/download/VELOCITY-DM-Setup-x64.exe" data-download>
+            <span data-en="Download for Windows" data-ar="تحميل لويندوز">Download for Windows</span>
+          </a>
+        </div>
+        <details class="smartscreen reveal">
+          <summary data-en="Windows says “Windows protected your PC”?" data-ar="ويندوز بيقول «Windows protected your PC»؟">Windows says “Windows protected your PC”?</summary>
+          <p data-en="That notice appears for new apps that Windows hasn’t seen many times yet. Click “More info”, then “Run anyway”. You can check the file against the SHA-256 checksums published with every release." data-ar="الرسالة دي بتظهر للبرامج الجديدة اللي ويندوز لسه مشافهاش كتير. اضغط «More info» وبعدين «Run anyway». وتقدر تتأكد من الملف ببصمة SHA-256 المنشورة مع كل إصدار.">That notice appears for new apps that Windows hasn’t seen many times yet. Click “More info”, then “Run anyway”. You can check the file against the SHA-256 checksums published with every release.</p>
+        </details>
       </section>
     </main>
 
     <footer class="foot">
-      <span>© 2026 VELOCITY DM</span>
-      <a href="privacy.html" data-en="Privacy policy" data-ar="سياسة الخصوصية">Privacy policy</a>
-      <a href="https://github.com/cloudd128/velocity-dm/issues" data-en="Support" data-ar="الدعم">Support</a>
-      <a href="https://github.com/cloudd128/velocity-dm/releases" data-en="All releases" data-ar="كل الإصدارات">All releases</a>
+      <div class="foot__inner">
+        <span>© 2026 VELOCITY DM</span>
+        <a href="privacy.html" data-en="Privacy policy" data-ar="سياسة الخصوصية">Privacy policy</a>
+        <a href="https://github.com/cloudd128/velocity-dm/releases" data-en="Release notes" data-ar="الإصدارات">Release notes</a>
+        <a href="https://github.com/cloudd128/velocity-dm/issues" data-en="Support" data-ar="الدعم">Support</a>
+      </div>
     </footer>
     <script src="assets/site.js"></script>
   </body>

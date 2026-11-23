@@ -4,23 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Privacy policy — VELOCITY DM</title>
-    <meta name="color-scheme" content="dark" />
+    <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="assets/favicon.png" />
     <link rel="stylesheet" href="assets/site.css" />
   </head>
   <body>
-    <header class="nav">
-      <a class="brand" href="./">
-        <img src="assets/icon-128.png" width="28" height="28" alt="" />
-        <span>VELOCITY <b>DM</b></span>
-      </a>
-      <nav class="nav__links">
-        <a href="./" data-en="Home" data-ar="الرئيسية">Home</a>
-        <button class="lang" id="lang" type="button" aria-label="Language">عربي</button>
-      </nav>
+    <a class="skip" href="#main" data-en="Skip to content" data-ar="انتقل إلى المحتوى">Skip to content</a>
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="brand" href="./" aria-label="VELOCITY DM">
+          <img src="assets/icon-128.png" width="22" height="22" alt="" />
+          <span>VELOCITY&nbsp;DM</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="./#features" data-en="Features" data-ar="المميزات">Features</a>
+          <a href="./#extension" data-en="Extension" data-ar="الإضافة">Extension</a>
+          <a href="./#specs" data-en="Specs" data-ar="المواصفات">Specs</a>
+        </nav>
+        <div class="nav__end">
+          <button class="lang" id="lang" type="button" lang="ar">عربي</button>
+          <a class="pill pill--small" href="./#download" data-en="Download" data-ar="تحميل">Download</a>
+        </div>
+      </div>
     </header>
 
-    <main class="doc">
+    <main id="main"><section class="doc">
       <article data-lang-block="en">
         <h1>Privacy policy</h1>
         <p class="muted">Last updated: 23 November 2026. Applies to the VELOCITY DM Windows app and the VELOCITY DM extension for Chrome and Edge.</p>
@@ -78,11 +86,14 @@
         <h2>التواصل</h2>
         <p>للاستفسارات: <a href="https://github.com/cloudd128/velocity-dm/issues">github.com/cloudd128/velocity-dm/issues</a></p>
       </article>
-    </main>
+    </section></main>
 
     <footer class="foot">
-      <span>© 2026 VELOCITY DM</span>
-      <a href="./" data-en="Home" data-ar="الرئيسية">Home</a>
+      <div class="foot__inner">
+        <span>© 2026 VELOCITY DM</span>
+        <a href="./" data-en="VELOCITY DM home" data-ar="صفحة VELOCITY DM">VELOCITY DM home</a>
+        <a href="https://github.com/cloudd128/velocity-dm/issues" data-en="Support" data-ar="الدعم">Support</a>
+      </div>
     </footer>
     <script src="assets/site.js"></script>
   </body>
